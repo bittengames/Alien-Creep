@@ -1,4 +1,4 @@
-Alien Creep - simple prototype game example
+# Alien Creep - simple prototype game example
 
 This is a simple example of a prototype game, similar to Space Invaders. It's in the form of a Unity project - download the .zip and extract to a new folder, then open in Unity. Created in Unity 2021.3.13f1.
 
@@ -18,15 +18,22 @@ Scripts:
 
 Scene Hierarchy:
 
-    Main Camera : Orthographic camera, black background, Sized and positioned to cover 10 units of world space when 2:3 ratio
+    Main Camera : Orthographic camera, black background, Sized and positioned to cover 10x15 units of world space when 2:3 ratio
+        Background : Sprite for background as child of Main Camera, scaled to cover 10x15 units of world space
+        
     GameManager : Empty GameObject for the GameManager component
+    
     Enemies : Empty GameObject for the EnemyGroupContoller component - enemies are instantiated as children of this object.
+    
     Gun : Gun prefab, ready to go.
+    
     TopCollider : GameObject with Box Collider that acts as a mop-up for the bullets if they miss
+    
     UICanvas : Screen Space - Overlay Canvas, with UIManager component
         BTN_Play : UI Button, for starting the game
         TXT_Messages : Text holder for the Title/Win/Lose messages
         TXT_Score : Text holder for the Score
+        
     EventSystem : Auto-included by Unity, provides input handling
 
 Alan Tinsley
